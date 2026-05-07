@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智能助手</title>
+    <style>
+      * { box-sizing: border-box;}
+      html { margin: 0; height: 100%; }
+      body { margin: 0; padding: 8px; height: 100%; }
+    </style>
+  </head>
+  <body>
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/latest/coze/web-sdk/dist/js-umd/index.min.js"></script>
+    <script>
+      const token = import.meta.env.VITE_COZE_TOKEN;
+      cozeWebSDK.init({
+        projectId: '7636980458764615707',
+        refreshToken: () => Promise.resolve(token),
+      });
+    </script>
+  </body>
+</html>

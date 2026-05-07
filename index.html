@@ -1,23 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>智能助手</title>
-    <style>
-      * { box-sizing: border-box;}
-      html { margin: 0; height: 100%; }
-      body { margin: 0; padding: 8px; height: 100%; }
-    </style>
-  </head>
-  <body>
-    <script src="https://lf-cdn.coze.cn/obj/unpkg/latest/coze/web-sdk/dist/js-umd/index.min.js"></script>
-    <script type="module">
-      const token = import.meta.env.VITE_COZE_TOKEN;
-      cozeWebSDK.init({
-        projectId: '7636980458764615707',
-        refreshToken: () => Promise.resolve(token),
-      });
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>合肥智能天气助手</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #0f1419;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
